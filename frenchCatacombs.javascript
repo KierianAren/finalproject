@@ -1,4 +1,4 @@
-  border-radius: 8px;<!DOCTYPE html>
+DOCTYPE html>
 <html>
   <head>
     <title>Furina Turnbased Energy: coded by Kierian Aren Bautista</title>
