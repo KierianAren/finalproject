@@ -30,7 +30,7 @@ A small slot machine. Depending on the time of viewing it it may or may not have
 
 ## Links
 - 🔗 **GitHub Repository:** [https://github.com/KierianAren/finalproject](https://github.com/KierianAren/finalproject)
-- 🌐 **Live Site (via GitHub Pages):** [View Portfolio](https://github.com/KierianAren/finalproject/blob/main/index.html)
+- 🌐 **Live Site (via GitHub Pages):** [View Portfolio]([https://github.com/KierianAren/finalproject/blob/main/index.html](https://kierianaren.github.io/finalproject/))
 
 ---
 
