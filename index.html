@@ -14,6 +14,13 @@
       background-color: #0e0e0e;
       color: #f0f0f0;
       line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
     }
     header {
       text-align: center;
@@ -92,9 +99,127 @@
       color: #777;
       border-top: 2px solid #333;
     }
-    #robin {
-      border-radius: 12px;
-    }
+  .robin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.robin-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 2 / 1; 
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.robin-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+  border-radius: 12px;
+}
+
+.robin-base {
+  opacity: 1;
+  z-index: 1;
+}
+
+.robin-hover {
+  opacity: 0;
+  z-index: 2;
+}
+
+.robin-wrapper:hover .robin-hover {
+  opacity: 1;
+}
+
+.robin-wrapper:hover .robin-base {
+  opacity: 0;
+}
+     
+     
+    .projects-section {
+  max-width: 1400px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 40px 0 10px;
+}
+
+.project-description-header {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.project-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.project-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  margin: 0 auto; 
+  margin-bottom: 50px;
+}
+
+.project-container:hover {
+  transform: scale(1.03);
+}
+
+.project-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%
+  height: 75%
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+.project-container:hover img {
+  opacity: 0.2;
+}
+
+.project-container:hover .project-overlay {
+  opacity: 1;
+}
   </style>
 </head>
 <body>
@@ -159,22 +284,56 @@
 
        
 
-        <img id="robin" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/04/honkai-star-rail-version-2-2-five-star-character-robin-explained.jpg?q=70&fit=crop&w=1140&h=&dpr=1" width="1000" height="500">
+       <div class="robin-container">
+  <div class="robin-wrapper">
+    <img class="robin-base" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/04/honkai-star-rail-version-2-2-five-star-character-robin-explained.jpg?q=70&fit=crop&w=1140&h=&dpr=1" alt="Robin">
+    <img class="robin-hover" src="https://res.lootbar.gg/pic/20240508/c744aba8-b2f8-4f37-9adf-414a0bfdd286.png" alt="Robin Hover">
+  </div>
+</div>
     </div>
 <div id="otherWebsites" class="section">
   <h3> Other Websites </h3>
-   <a href="https://codepen.io/Kierian-Aren-Bautista/pen/LEYRgqj">Password Bug (Password Generator)</a>
-  <br>
-  
-   <a href="https://codepen.io/Kierian-Aren-Bautista/pen/EaxNgXO?editors=1001&fbclid=PAY2xjawIsct9leHRuA2FlbQIxMAABpu-4wZkbaGI0Si5_e-VQ8dlsso3JH9jcZRW_Gcnz1qYqyCVByUF96lCkdg_aem_VFRzYfcINVKYCCxIaFGNLw">Black Jack</a>
-  <br>
-     <a href="https://kierianaren.github.io/FrenchCatacombsMain/"> French Catacombs- RPG </a>
-    <br>
-    <a href="https://kierianaren.github.io/kfclicker/"> KFCLICKER </a>
-    <br>
-     <a href="https://kierianaren.github.io/funbox/"> FUNBOX </a>
-  
-  
+  <div style="text-align:center; font-family:Arial, sans-serif;">
+
+  <h2>Projects that were assigned in class</h2>
+  <div style="display:flex; justify-content:center; gap:40px; margin-bottom:40px;">
+    <a href="https://password-bug.vercel.app/" style="text-decoration:none;">
+      <div style="font-size:24px;">Password Bug</div>
+    </a>
+    <a href="https://black-jack-nu.vercel.app/" style="text-decoration:none;">
+      <div style="font-size:24px;">Black Jack</div>
+    </a>
+  </div>
+
+ <a href="https://kierianaren.github.io/FrenchCatacombsMain/" target="_blank">
+  <div class="project-container">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7c57373-558e-4348-8cd0-b4fcc03a1fbb/djuiljb-1dba83ee-b3a4-4d95-9cee-bb4e65f1f882.png/v1/fill/w_1192,h_670/french_catacombs_by_apcompsci3rdperiod_djuiljb-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYjdjNTczNzMtNTU4ZS00MzQ4LThjZDAtYjRmY2MwM2ExZmJiXC9kanVpbGpiLTFkYmE4M2VlLWIzYTQtNGQ5NS05Y2VlLWJiNGU2NWYxZjg4Mi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.1LaRrcb9j3lVFFW8YWzYebI50folAcMZGVH5-ZrHu24" alt="French Catacombs" />
+    <div class="project-overlay">
+      A short visual novel with a turn-based RPG fight. Collaboration between myself, Francis, Johnathan, and Jalil.  <br>  CLICK HERE TO PLAY NOW
+    </div>
+  </div>
+</a>
+
+ <a href="https://kierianaren.github.io/kfclicker/" target="_blank">
+  <div class="project-container">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7c57373-558e-4348-8cd0-b4fcc03a1fbb/djuilmn-42de90a4-73ea-4097-a4e0-79bfa159ce2b.jpg/v1/fill/w_1192,h_670,q_70,strp/untitled_by_apcompsci3rdperiod_djuilmn-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYjdjNTczNzMtNTU4ZS00MzQ4LThjZDAtYjRmY2MwM2ExZmJiXC9kanVpbG1uLTQyZGU5MGE0LTczZWEtNDA5Ny1hNGUwLTc5YmZhMTU5Y2UyYi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.r_iA0MuOY-8syEIrsp7X3SwuYTFjAayksBOi38rZCIg" alt="KFCLICKER" />
+    <div class="project-overlay">
+      A cookie clicker inspired game using chickens. Collaboration between myself and Jalil Johnson. <br>   CLICK HERE TO PLAY NOW
+    </div>
+  </div>
+</a>
+
+
+<a href="https://kierianaren.github.io/funbox/" target="_blank">
+  <div class="project-container">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7c57373-558e-4348-8cd0-b4fcc03a1fbb/djuillf-869b63d3-67cf-4ee1-8237-a2b19d5ecd08.jpg/v1/fill/w_1192,h_670,q_70,strp/fun_box_by_apcompsci3rdperiod_djuillf-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYjdjNTczNzMtNTU4ZS00MzQ4LThjZDAtYjRmY2MwM2ExZmJiXC9kanVpbGxmLTg2OWI2M2QzLTY3Y2YtNGVlMS04MjM3LWEyYjE5ZDVlY2QwOC5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.xk-I3gTqQ9irN5-o5-vP7V8JfeqYJEbOskuDNFoD-lQ" alt="Funbox" />
+    <div class="project-overlay">
+      A slot machine project made with Johnathan Rice. Gain points over time and try your luck!   <br>  CLICK HERE TO PLAY NOW
+    </div>
+  </div>
+</a>
+
+</div>
   </div>
   
 
